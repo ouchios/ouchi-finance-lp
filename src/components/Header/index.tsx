@@ -236,7 +236,7 @@ const chooseSize = (size: string) => {
 export const Links = [
   {
     label: 'app',
-    link: 'https://www.ouchi.asia/',
+    link: 'https://app.ouchi.finance/#/home',
   },
   {
     label: 'mission',
@@ -244,11 +244,11 @@ export const Links = [
   },
   {
     label: 'git',
-    link: '#',
+    link: 'https://github.com/ouchios',
   },
   {
     label: 'docs',
-    link: '#',
+    link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
   },
 ];
 
@@ -304,7 +304,7 @@ const Header = () => {
           >
             <ToggleTheme size={size.icon} />
           </div>
-          <MyBtn href="https://www.ouchi.asia/" fontSize={size.font}>{t('mainBtn')}</MyBtn>
+          <MyBtn href="https://app.ouchi.finance/#/home" fontSize={size.font}>{t('mainBtn')}</MyBtn>
         </Last>
       </HeaderRoot>
       <Mobile>

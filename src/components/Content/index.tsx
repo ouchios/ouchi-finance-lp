@@ -119,7 +119,7 @@ const Content = () => {
         any more Enjoy Defi activities with Ouchi Finance!`}
       </TXT2>
       <MainButton>
-        <MyBtn href="https://www.ouchi.asia/" width={sizes.w} height={sizes.h} fontSize={sizes.f} radius="15px">
+        <MyBtn href="https://app.ouchi.finance/#/home" width={sizes.w} height={sizes.h} fontSize={sizes.f} radius="15px">
           {t('mainBtn')}
         </MyBtn>
       </MainButton>

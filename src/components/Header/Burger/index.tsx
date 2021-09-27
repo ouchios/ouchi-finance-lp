@@ -40,7 +40,7 @@ const HeaderLinks = styled.a`
 export const Links = [
   {
     label: 'App',
-    link: 'https://www.ouchi.asia/',
+    link: 'https://app.ouchi.finance/#/home',
   },
   {
     label: 'Mission',
@@ -48,11 +48,11 @@ export const Links = [
   },
   {
     label: 'GitHub',
-    link: '#',
+    link: 'https://github.com/ouchios',
   },
   {
     label: 'Docs',
-    link: '#',
+    link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
   },
 ];
 
