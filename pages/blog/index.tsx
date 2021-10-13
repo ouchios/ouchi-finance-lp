@@ -278,7 +278,7 @@ const BlogBlockImg = styled.div`
     height: 256px;
   }
 `;
-const BlogItemNews = ({ Component, pageProps }: Props) => {
+const BlogItemNews = () => {
   return(
     <>
             <BlogStyleBlock>
@@ -300,7 +300,7 @@ same for every platform.</p>
     </>
   )
 }
-const BlogListNews = ({ Component, pageProps }: Props) => {
+const BlogListNews = () => {
   return (
     <>
       <BlogListItem>
