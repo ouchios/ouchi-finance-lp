@@ -346,7 +346,7 @@ const Blog = ({ Component, pageProps }: Props) => {
             ),
           )}
           <BlogBlockImg>
-            <BlogImg src="/blog/blog1/title.jpg" />
+            <BlogImg src="/title.jpg" />
           </BlogBlockImg>
           <Contenier>
             <BlogTitle>
@@ -376,7 +376,7 @@ send and receive funds.</TextP>
                 <TextP>The MetaMask wallet window</TextP>
 
                 <TextH1>The MetaMask wallet window</TextH1>
-                <TextImg src="/blog/blog1/metamask.png"/>
+                <TextImg src="/metamask.png"/>
                 <TextP>You might notice straight away that we’re still dealing
   with an Ethereum wallet. At best, this won’t work with
   Ouchi Finance. At worst, you could lose funds by sending
@@ -386,7 +386,7 @@ send and receive funds.</TextP>
 
                 <TextH1>Click “Ethereum Mainnet”
   and select “Custom RPC”.</TextH1>
-                <TextImg src="/blog/blog1/net.png"/>
+                <TextImg src="/net.png"/>
                 <TextP>You might notice straight away that we’re still dealing
 with an Ethereum wallet. At best, this won’t work with
 Ouchi Finance. At worst, you could lose funds by sending
@@ -395,7 +395,7 @@ them to addresses you can’t actually use.</TextP>
 to point the wallet towards Nodoka Chain nodes.</TextP>
 
                 <TextH1>Input Nodoka Mainnet information.</TextH1>
-                <TextImg src="/blog/blog1/nodoka.png"/>
+                <TextImg src="/nodoka.png"/>
                 <TextP>Below are the parameters to fill in for each. Make sure
 not to make a mistake! Then click “Save”.</TextP>
                 <TextP>Nodoka Mainnet<br />
@@ -406,7 +406,7 @@ not to make a mistake! Then click “Save”.</TextP>
                   
                   <TextH1>Your MetaMask got to work
 on Nodoka Mainnet now.</TextH1>
-                  <TextImg src="/blog/blog1/balance.png"/>
+                  <TextImg src="/balance.png"/>
                   <TextP>You need to move (bridge) your tokens to the Nodoka
 chain next because Ouchi Finance is an application
 on Nodoka chain.</TextP>
@@ -415,9 +415,9 @@ on Nodoka chain.</TextP>
 with Nodoka Bridge.</TextP>
 
                   <TextH1>Click “Connect Wallet”</TextH1>
-                  <TextImg src="/blog/blog1/connect1.png"/>
+                  <TextImg src="/connect1.png"/>
                   <TextP>Select MetaMask</TextP>
-                  <TextImg src="/blog/blog1/connect2.png"/>
+                  <TextImg src="/connect2.png"/>
                   <TextP>Find a token you want to move to Nodoka chain.</TextP>
                   <TextP>Then input amount and click “Next” and “Confirm”.</TextP>
 
@@ -432,7 +432,7 @@ are good way to keep up.</TextP>
 
                   <TextH1>Click “Enter App” at the center or top right
 of the page to start your life with Defi!</TextH1>
-                  <TextImg src="/blog/blog1/ouchifinancehome.png"/>
+                  <TextImg src="/ouchifinancehome.png"/>
                   <TextP>Then, connect your wallet with Ouchi Finance
 in the same way you did with Nodoka Bridge.</TextP>
                   <TextP>When you click “Swap” on the left bar,

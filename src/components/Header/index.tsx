@@ -235,19 +235,19 @@ const chooseSize = (size: string) => {
 
 export const Links = [
   {
-    label: 'app',
+    label: 'App',
     link: 'https://app.ouchi.finance/#/home',
   },
   {
-    label: 'mission',
+    label: 'Mission',
     link: 'https://ouchi.earth/english',
   },
   {
-    label: 'git',
+    label: 'GitHub',
     link: 'https://github.com/ouchios',
   },
   {
-    label: 'docs',
+    label: 'Docs',
     link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
   },
   {
@@ -281,7 +281,7 @@ const Header = () => {
         </First>
         <Last>
           {Links.map(({ link, label }) => (
-            <HeaderLinks href={link} target="_blank" rel="noreferrer">{t(label)}</HeaderLinks>
+            <HeaderLinks href={link} target="_blank" rel="noreferrer">{label}</HeaderLinks>
           ))}
           <HeaderLinksSoc href="https://twitter.com/OuchiFinance" target="_blank" rel="noreferrer">
             <Image

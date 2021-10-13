@@ -293,7 +293,7 @@ same for every platform.</p>
                       <p>September 16th, 2021 - 5 min read</p>
                     </BlogBlockText>
                     <BlogBlockImg>
-                      <BlogImg src="/blog/blog1/title.jpg" />
+                      <BlogImg src="/title.jpg" />
                     </BlogBlockImg>
                 </BlogAStyleBlock>
             </BlogStyleBlock>
@@ -310,7 +310,20 @@ const BlogListNews = () => {
   )
 }
 
-
+const TextHome = styled.a`
+display: inline-flex;
+align-items: center;
+vertical-align: middle;
+color: #3F6697;
+font-weight: bold;
+margin-right: 3px;
+text-decoration: none;`;
+const CenterBlock = styled.div`
+margin-top: 2em;
+text-align: center;`;
+const TextBlog = styled.a`
+margin-left: 3px;
+font-weight: bold;`;
 const Blog = ({ Component, pageProps }: Props) => {
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -348,6 +361,14 @@ const Blog = ({ Component, pageProps }: Props) => {
             ),
           )}
           <BlogTitle>
+          <CenterBlock>
+            <TextHome href="/">Home</TextHome>
+              <svg className="separator" width="8" height="8" viewBox="0 0 8 8">
+                <path d="M2,6.9L4.8,4L2,1.1L2.6,0l4,4l-4,4L2,6.9z"></path>
+              </svg>
+            <TextBlog>Blog</TextBlog>
+          </CenterBlock>
+
             <BlogText>
               Blog
             </BlogText>
