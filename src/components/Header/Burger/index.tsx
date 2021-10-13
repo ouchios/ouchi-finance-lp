@@ -54,6 +54,10 @@ export const Links = [
     label: 'Docs',
     link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
   },
+  {
+    label: 'Blog',
+    link: '/blog',
+  },
 ];
 
 export const Share = [

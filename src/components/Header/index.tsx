@@ -250,6 +250,10 @@ export const Links = [
     label: 'docs',
     link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
   },
+  {
+    label: 'Blog',
+    link: '/blog',
+  },
 ];
 
 const Header = () => {
