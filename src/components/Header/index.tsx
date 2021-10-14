@@ -34,7 +34,7 @@ const ThemeAndBurger = styled.div`
   align-items: center;
   height: 80px;
   @media (${device.xs}) {
-    gap: .5rem;
+    gap: 0.5rem;
   }
   @media (${device.md}) {
     gap: 20px;
@@ -276,14 +276,25 @@ const Header = () => {
     <>
       <HeaderRoot>
         <First>
-          <Image src="/img.png" alt="logo" width={size.main} height={size.main} />
+          <Image
+            src="/img.png"
+            alt="logo"
+            width={size.main}
+            height={size.main}
+          />
           <Title>{t('title')}</Title>
         </First>
         <Last>
           {Links.map(({ link, label }) => (
-            <HeaderLinks href={link} target="_blank" rel="noreferrer">{label}</HeaderLinks>
+            <HeaderLinks href={link} target="_blank" rel="noreferrer">
+              {label}
+            </HeaderLinks>
           ))}
-          <HeaderLinksSoc href="https://twitter.com/OuchiFinance" target="_blank" rel="noreferrer">
+          <HeaderLinksSoc
+            href="https://twitter.com/OuchiFinance"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Image
               onClick={toggleTheme}
               src="/twitter.svg"
@@ -292,7 +303,11 @@ const Header = () => {
               height={size.soc.h}
             />
           </HeaderLinksSoc>
-          <HeaderLinksSoc href="https://t.me/OuchiFinance" target="_blank" rel="noreferrer">
+          <HeaderLinksSoc
+            href="https://t.me/OuchiFinance"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Image
               onClick={toggleTheme}
               src="/telegram.svg"
@@ -301,19 +316,27 @@ const Header = () => {
               height={size.soc.h}
             />
           </HeaderLinksSoc>
-          <div style={{
-            marginLeft: 16,
-            marginRight: 2,
-          }}
+          <div
+            style={{
+              marginLeft: 16,
+              marginRight: 2,
+            }}
           >
             <ToggleTheme size={size.icon} />
           </div>
-          <MyBtn href="https://app.ouchi.finance/#/home" fontSize={size.font}>{t('mainBtn')}</MyBtn>
+          <MyBtn href="https://app.ouchi.finance/#/home" fontSize={size.font}>
+            {t('mainBtn')}
+          </MyBtn>
         </Last>
       </HeaderRoot>
       <Mobile>
         <MobileTitle>
-          <Image src="/img.png" alt="logo" width={size.main} height={size.main} />
+          <Image
+            src="/img.png"
+            alt="logo"
+            width={size.main}
+            height={size.main}
+          />
           <Title>{t('title')}</Title>
         </MobileTitle>
         <MobileMenu>

@@ -9,7 +9,7 @@ const MyButton = styled(Button)`
   box-shadow: ${(props) => props.theme.palette.cards.shadow};
   border-radius: 40px;
   @media (${device.xs}) {
-   padding: 10px 20px;
+    padding: 10px 20px;
     width: 122px;
     height: 42px;
   }
@@ -36,7 +36,7 @@ const TxT = styled.span`
   font-family: FiraGO;
   font-style: normal;
   font-weight: 900;
-  
+
   display: flex;
   align-items: center;
   text-align: center;
@@ -84,12 +84,7 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-const JoinButton = ({
-  children,
-  icon,
-  link,
-  ...props
-}: any) => {
+const JoinButton = ({ children, icon, link, ...props }: any) => {
   const width = useWidth();
 
   const size = useMemo(() => chooseSize(width), [width]);

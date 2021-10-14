@@ -14,7 +14,8 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   background: ${(props: any) => props.theme.palette.primary.secondary};
-  transform: ${({ open }: StyleProp) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ open }: StyleProp) =>
+    open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -32,7 +33,7 @@ const HeaderLinks = styled.a`
   font-style: normal;
   font-weight: 900;
   font-size: 1.5rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   text-decoration: none;
   color: ${(props) => props.theme.palette.primary.primary};
 `;
@@ -76,29 +77,24 @@ const Menu = ({ open }: StyleProp) => {
   const { t } = useTranslation('common');
   return (
     <StyledMenu open={open}>
-      {Links.map(({
-        label,
-        link,
-      }) => (
+      {Links.map(({ label, link }) => (
         <HeaderLinks href={link} target="_blank" rel="noreferrer">
           {label}
         </HeaderLinks>
       ))}
       <div style={{ height: '3rem' }} />
-      {Share.map(({
-        label,
-        link,
-      }) => (
+      {Share.map(({ label, link }) => (
         <HeaderLinks href={link} target="_blank" rel="noreferrer">
           {label}
         </HeaderLinks>
       ))}
-      <div style={{
-        position: 'fixed',
-        zIndex: 101,
-        bottom: 18,
-        right: 18,
-      }}
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: 101,
+          bottom: 18,
+          right: 18,
+        }}
       >
         <MyBtn width="200px" height="50px" fontSize="14px" radius="5px">
           {t('mainBtn')}
@@ -120,7 +116,7 @@ const StyledBurger = styled.button`
   padding: 0;
   z-index: 101;
   @media (${device.xs}) {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     height: 1.5rem;
   }
   @media (${device.md}) {
@@ -141,16 +137,19 @@ const StyledBurger = styled.button`
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }: StyleProp) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }: StyleProp) =>
+    open ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }: StyleProp) => open ? '0' : '1'};
-      transform: ${({ open }: StyleProp) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }: StyleProp) => (open ? '0' : '1')};
+      transform: ${({ open }: StyleProp) =>
+    open ? 'translateX(20px)' : 'translateX(0)'};
     }
 
     :nth-child(3) {
-      transform: ${({ open }: StyleProp) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }: StyleProp) =>
+    open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `;
@@ -159,16 +158,10 @@ interface MainT extends StyleProp {
   setOpen: (_arg0: boolean) => void;
 }
 
-export const Burger = ({
-  open,
-  setOpen,
-}: MainT) => {
+export const Burger = ({ open, setOpen }: MainT) => {
   return (
     <>
-      <StyledBurger
-        open={open}
-        onClick={() => setOpen(!open)}
-      >
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
         <div />

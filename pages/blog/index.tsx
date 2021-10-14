@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { NextComponentType, NextPageContext } from 'next';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from '@src/store';
@@ -11,7 +11,6 @@ import Content from '@src/components/Content';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { useWidth } from '@src/themes/sizes';
-
 
 const Main = styled.div`
   width: 100%;
@@ -43,8 +42,8 @@ const Img = styled.div`
 interface BlurredDotsTypes {
   src: string;
   alt: string;
-  width: string,
-  height: string,
+  width: string;
+  height: string;
   left?: any;
   top?: any;
   right?: any;
@@ -182,16 +181,17 @@ const BlogText = styled.h2`
   font-family: FiraGO;
   font-style: normal;
   font-weight: 900;
-  color: #3F6697;
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
 `;
 
 const NewsText = styled.p`
   padding: 0;
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
   margin: 0 0 1.45rem;
 `;
 
 const SubText = styled.a`
-  color: #42B7A0;
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
   text-decoration: none;
 `;
 
@@ -256,6 +256,7 @@ const BlogBlockP = styled.p`
   margin-top: 0px;
   color: black;
   font-size: 36px;
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
 `;
 
 const BlogImg = styled.img`
@@ -278,28 +279,31 @@ const BlogBlockImg = styled.div`
     height: 256px;
   }
 `;
+const BlackTheme = styled.p`
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
+`;
 const BlogItemNews = () => {
-  return(
+  return (
     <>
-            <BlogStyleBlock>
-                <BlogAStyleBlock href="/blog/1/">
-                    <BlogBlockText>
-                      <BlogBlockP>Ouchi Finance Instruction</BlogBlockP>
-                      <p>
-                      MetaMask can be downloaded on Chrome and Firefox,
-or on iOS and Android. We'll use the Chrome version
-here, but the instructions will be more or less the
-same for every platform.</p>
-                      <p>September 16th, 2021 - 5 min read</p>
-                    </BlogBlockText>
-                    <BlogBlockImg>
-                      <BlogImg src="/title.jpg" />
-                    </BlogBlockImg>
-                </BlogAStyleBlock>
-            </BlogStyleBlock>
+      <BlogStyleBlock>
+        <BlogAStyleBlock href="/blog/1/">
+          <BlogBlockText>
+            <BlogBlockP>Ouchi Finance Instruction</BlogBlockP>
+            <BlackTheme>
+              MetaMask can be downloaded on Chrome and Firefox, or on iOS and
+              Android. We'll use the Chrome version here, but the instructions
+              will be more or less the same for every platform.
+            </BlackTheme>
+            <BlackTheme>September 16th, 2021 - 5 min read</BlackTheme>
+          </BlogBlockText>
+          <BlogBlockImg>
+            <BlogImg src="/title.jpg" />
+          </BlogBlockImg>
+        </BlogAStyleBlock>
+      </BlogStyleBlock>
     </>
-  )
-}
+  );
+};
 const BlogListNews = () => {
   return (
     <>
@@ -307,80 +311,74 @@ const BlogListNews = () => {
         <BlogItemNews />
       </BlogListItem>
     </>
-  )
-}
+  );
+};
 
 const TextHome = styled.a`
-display: inline-flex;
-align-items: center;
-vertical-align: middle;
-color: #3F6697;
-font-weight: bold;
-margin-right: 3px;
-text-decoration: none;`;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  color: #3f6697;
+  font-weight: bold;
+  margin-right: 3px;
+  text-decoration: none;
+`;
 const CenterBlock = styled.div`
-margin-top: 2em;
-text-align: center;`;
+  margin-top: 2em;
+  text-align: center;
+`;
 const TextBlog = styled.a`
-margin-left: 3px;
-font-weight: bold;`;
-const Blog = ({ Component, pageProps }: Props) => {
-  useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }, []);
+  color: ${(props) => props.theme.palette.primary.toggleGrey};
+  margin-left: 3px;
+  font-weight: bold;
+`;
+
+const Iconright = styled.svg`
+  fill: ${(props) => props.theme.palette.primary.toggleGrey};
+`;
+
+function Blog() {
   const size = useWidth();
 
   return (
     <>
-      <Head>
-        <title>Ouchi Finance</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-        />
-      </Head>
-      <Header />
-      <body>
-        <Main>
-          {blurredDots.map(
-            ({ src, alt, width, height, left, top, bottom, right }) => (
-              <Img
-                top={top[size]}
-                bottom={bottom[size]}
-                left={left[size]}
-                width={width}
-                height={height}
-                right={right[size]}
-              >
-                <Image layout="fill" src={src} alt={alt} />
-              </Img>
-            ),
-          )}
+      <Main>
+        {blurredDots.map(
+          ({ src, alt, width, height, left, top, bottom, right }) => (
+            <Img
+              top={top[size]}
+              bottom={bottom[size]}
+              left={left[size]}
+              width={width}
+              height={height}
+              right={right[size]}
+            >
+              <Image layout="fill" src={src} alt={alt} />
+            </Img>
+          ),
+        )}
+        <Header />
+        <>
           <BlogTitle>
-          <CenterBlock>
-            <TextHome href="/">Home</TextHome>
-              <svg className="separator" width="8" height="8" viewBox="0 0 8 8">
+            <CenterBlock>
+              <TextHome href="/">Home</TextHome>
+              <Iconright width="8" height="8" viewBox="0 0 8 8">
                 <path d="M2,6.9L4.8,4L2,1.1L2.6,0l4,4l-4,4L2,6.9z"></path>
-              </svg>
-            <TextBlog>Blog</TextBlog>
-          </CenterBlock>
+              </Iconright>
+              <TextBlog>Blog</TextBlog>
+            </CenterBlock>
 
-            <BlogText>
-              Blog
-            </BlogText>
+            <BlogText>Blog</BlogText>
             <NewsText>
-              News, stories, and announcements from Ouchi Finance.<SubText>Subscribe</SubText>
+              News, stories, and announcements from Ouchi Finance.
+              <SubText>Subscribe</SubText>
             </NewsText>
           </BlogTitle>
           <BlogListNews />
+        </>
       </Main>
-    </body>
     </>
   );
-};
+}
 
 export default Blog;

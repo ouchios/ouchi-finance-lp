@@ -62,10 +62,7 @@ const IOSSwitch = withStyles((theme) => ({
   },
   checked: {},
   focusVisible: {},
-}))(({
-  classes,
-  ...props
-}) => {
+}))(({ classes, ...props }) => {
   return (
     <Switch
       focusVisibleClassName={classes.focusVisible}
@@ -120,18 +117,8 @@ export default function ToggleTheme({ size }) {
       )}
       label={(
         <LabelDiv>
-          <Image
-            src="/sun.svg"
-            alt="logo"
-            width={size}
-            height={size}
-          />
-          <Image
-            src="/moon.svg"
-            alt="logo"
-            width={size}
-            height={size}
-          />
+          <Image src="/sun.svg" alt="logo" width={size} height={size} />
+          <Image src="/moon.svg" alt="logo" width={size} height={size} />
         </LabelDiv>
       )}
     />

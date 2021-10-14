@@ -119,15 +119,18 @@ const Content = () => {
         any more Enjoy Defi activities with Ouchi Finance!`}
       </TXT2>
       <MainButton>
-        <MyBtn href="https://app.ouchi.finance/#/home" width={sizes.w} height={sizes.h} fontSize={sizes.f} radius="15px">
+        <MyBtn
+          href="https://app.ouchi.finance/#/home"
+          width={sizes.w}
+          height={sizes.h}
+          fontSize={sizes.f}
+          radius="15px"
+        >
           {t('mainBtn')}
         </MyBtn>
       </MainButton>
       <CenterContainer>
-        {centerTexts.map(({
-          title,
-          desc,
-        }) => (
+        {centerTexts.map(({ title, desc }) => (
           <CenterContainerInner key={title}>
             <CenterMain>
               {title}
@@ -141,23 +144,16 @@ const Content = () => {
       <LearnBlock>
         <LearnTitle>Learn Ouchi Finance</LearnTitle>
         <LearnDesc>
-          {
-            `We are building a network in the global scale based on the mutual aid with a value put on trust and 
-            empathy Our community is "an Ouchi (a safe house)" for you in the digital world`
-          }
+          {`We are building a network in the global scale based on the mutual aid with a value put on trust and 
+            empathy Our community is "an Ouchi (a safe house)" for you in the digital world`}
         </LearnDesc>
         <LearnDesc>
-          We will be a platform for you to deal in rights, guaranteed with NFT, to live in an Ouchi even in the real
-          world in the future.
+          We will be a platform for you to deal in rights, guaranteed with NFT,
+          to live in an Ouchi even in the real world in the future.
         </LearnDesc>
       </LearnBlock>
       <CardsBlock>
-        {cards.map(({
-          title,
-          img,
-          type,
-          size,
-        }) => (
+        {cards.map(({ title, img, type, size }) => (
           <>
             {/* @ts-ignore */}
             <CardsOutter type={type} key={title}>
@@ -178,9 +174,10 @@ const Content = () => {
         >
           Our Community
         </LearnTitle>
-        <LearnDesc style={{
-          width: '100%',
-        }}
+        <LearnDesc
+          style={{
+            width: '100%',
+          }}
         >
           Feel free to contact the team, Enjoy chatting with others in the
           community.
@@ -188,8 +185,15 @@ const Content = () => {
       </LearnBlock>
       <JoinUs>
         <JoinUsInner>
-          <JoinButton link="https://twitter.com/OuchiFinance" icon="/twitter.svg">Twitter</JoinButton>
-          <JoinButton link="https://t.me/OuchiFinance" icon="/telegram.svg">Telegram</JoinButton>
+          <JoinButton
+            link="https://twitter.com/OuchiFinance"
+            icon="/twitter.svg"
+          >
+            Twitter
+          </JoinButton>
+          <JoinButton link="https://t.me/OuchiFinance" icon="/telegram.svg">
+            Telegram
+          </JoinButton>
         </JoinUsInner>
       </JoinUs>
       <FooterDiv>

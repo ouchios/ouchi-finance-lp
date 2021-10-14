@@ -120,7 +120,7 @@ const CenterDesc = styled.span`
   color: ${(props) => props.theme.palette.primary.primary};
   @media (${device.xs}) {
     font-size: 10px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     line-height: normal;
   }
   @media (${device.sm}) {
@@ -285,7 +285,8 @@ const CardsBlock = styled.div`
   @media (${device.xl}) {
     padding: 0 100px;
     gap: 212px;
-  }`;
+  }
+`;
 
 const CardsOutter = styled.div`
   background: ${(props: any) => props.theme.palette.cards[props.type]};
@@ -339,7 +340,7 @@ const CardsTxT = styled.span`
   display: flex;
   align-items: center;
   text-align: center;
-  color: ${(props: any) => props.type === 'important' ? '#fff' : '#42B7A0'};
+  color: ${(props: any) => (props.type === 'important' ? '#fff' : '#42B7A0')};
   @media (${device.xs}) {
     font-size: 18px;
     padding-bottom: 1rem;

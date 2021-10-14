@@ -35,8 +35,8 @@ const Img = styled.div`
 interface BlurredDotsTypes {
   src: string;
   alt: string;
-  width: string,
-  height: string,
+  width: string;
+  height: string;
   left?: any;
   top?: any;
   right?: any;
