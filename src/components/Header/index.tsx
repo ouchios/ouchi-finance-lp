@@ -234,10 +234,10 @@ const chooseSize = (size: string) => {
 };
 
 export const Links = [
-  {
-    label: 'App',
-    link: 'https://app.ouchi.finance/#/home',
-  },
+  // {
+  //   label: 'App',
+  //   link: 'https://app.ouchi.finance/#/home',
+  // },
   {
     label: 'Mission',
     link: 'https://ouchi.earth/english',
@@ -246,10 +246,10 @@ export const Links = [
     label: 'GitHub',
     link: 'https://github.com/ouchios',
   },
-  {
-    label: 'Docs',
-    link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
-  },
+  // {
+  //   label: 'Docs',
+  //   link: 'https://nodoka-zen.gitbook.io/ouchifinance/',
+  // },
   {
     label: 'Blog',
     link: '/blog',
