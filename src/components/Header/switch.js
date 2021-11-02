@@ -107,20 +107,20 @@ export default function ToggleTheme({ size }) {
   return (
     <FormControlLabel
       labelPlacement="top"
-      control={(
+      control={
         <IOSSwitch
           lite={currentTheme !== 'dark'}
           checked={currentTheme === 'dark'}
           onChange={toggleTheme}
           name="checkedB"
         />
-      )}
-      label={(
+      }
+      label={
         <LabelDiv>
           <Image src="/sun.svg" alt="logo" width={size} height={size} />
           <Image src="/moon.svg" alt="logo" width={size} height={size} />
         </LabelDiv>
-      )}
+      }
     />
   );
 }

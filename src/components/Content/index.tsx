@@ -27,21 +27,7 @@ import {
   TXT2,
   MainButton,
 } from './styles';
-
-const centerTexts = [
-  {
-    title: '$0',
-    desc: 'All Time Volume',
-  },
-  {
-    title: '0',
-    desc: 'Liquidity Providers',
-  },
-  {
-    title: '0',
-    desc: 'All Time Trades',
-  },
-];
+import { get_API_JSON } from '@src/utils/api_req';
 
 const cards = [
   {
@@ -109,6 +95,18 @@ const Content = () => {
   const width = useWidth();
   const sizes = useMemo(() => chooseSize(width), [width]);
 
+  let json_resp_ouchi = get_API_JSON('https://api.neins.finance/ouchi/info');
+
+  let TVl = '0';
+  let usd_price = '0';
+  let APR = '0';
+
+  if (json_resp_ouchi !== undefined) {
+    TVl = json_resp_ouchi.tvl;
+    APR = json_resp_ouchi.apr;
+    usd_price = json_resp_ouchi.price;
+  }
+
   return (
     <ContentRoot>
       <TXT1>A Revolutionary DEX</TXT1>
@@ -130,16 +128,41 @@ const Content = () => {
         </MyBtn>
       </MainButton>
       <CenterContainer>
-        {centerTexts.map(({ title, desc }) => (
-          <CenterContainerInner key={title}>
-            <CenterMain>
-              {title}
-              {/* @ts-ignore */}
-              <CenterMain opacity={0.4}>+</CenterMain>
-            </CenterMain>
-            <CenterDesc>{desc}</CenterDesc>
-          </CenterContainerInner>
-        ))}
+        <CenterContainerInner key={'id_el_tvl'}>
+          <CenterMain>
+            {usd_price + '$'}
+            {/* @ts-ignore */}
+            <CenterMain opacity={0.4}>+</CenterMain>
+          </CenterMain>
+          <CenterDesc>{'Price Ouchi'}</CenterDesc>
+        </CenterContainerInner>
+
+        <CenterContainerInner key={'id_el_apr'}>
+          <CenterMain>
+            {APR + '%'}
+            {/* @ts-ignore */}
+            <CenterMain opacity={0.4}>+</CenterMain>
+          </CenterMain>
+          <CenterDesc>{'Price Ouchi'}</CenterDesc>
+        </CenterContainerInner>
+
+        <CenterContainerInner key={'id_el_tvl'}>
+          <CenterMain>
+            {TVl + '$'}
+            {/* @ts-ignore */}
+            <CenterMain opacity={0.4}>+</CenterMain>
+          </CenterMain>
+          <CenterDesc>{'Total Value Locked'}</CenterDesc>
+        </CenterContainerInner>
+        {/* {centerTexts.map(({ title, desc }) => ( */}
+        {/* <CenterContainerInner key={title}>*/}
+        {/* <CenterMain> */}
+        {/* {title} */}
+        {/* <CenterMain opacity={0.4}>+</CenterMain> */}
+        {/* </CenterMain> */}
+        {/* <CenterDesc>{desc}</CenterDesc> */}
+        {/* </CenterContainerInner> */}
+        {/* ))}*/}
       </CenterContainer>
       <LearnBlock>
         <LearnTitle>Learn Ouchi Finance</LearnTitle>

@@ -138,18 +138,18 @@ const StyledBurger = styled.button`
 
     :first-child {
       transform: ${({ open }: StyleProp) =>
-    open ? 'rotate(45deg)' : 'rotate(0)'};
+        open ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     :nth-child(2) {
       opacity: ${({ open }: StyleProp) => (open ? '0' : '1')};
       transform: ${({ open }: StyleProp) =>
-    open ? 'translateX(20px)' : 'translateX(0)'};
+        open ? 'translateX(20px)' : 'translateX(0)'};
     }
 
     :nth-child(3) {
       transform: ${({ open }: StyleProp) =>
-    open ? 'rotate(-45deg)' : 'rotate(0)'};
+        open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `;
