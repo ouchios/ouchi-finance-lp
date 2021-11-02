@@ -23,7 +23,10 @@ const MyApp = ({ Component, pageProps }: Props) => {
       jssStyles.parentNode.removeChild(jssStyles);
     }
   }, []);
-
+  function gtag(dataLayer){
+    console.info("arguments", arguments)
+    dataLayer.push(arguments)
+    }
   return (
     <>
       <Head>
@@ -32,6 +35,14 @@ const MyApp = ({ Component, pageProps }: Props) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRG7RLWPK5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          
+          gtag('js', new Date());
+
+          gtag('config', 'G-QRG7RLWPK5');
+      </script>
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
