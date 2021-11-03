@@ -143,7 +143,7 @@ const Content = () => {
             {/* @ts-ignore */}
             <CenterMain opacity={0.4}>+</CenterMain>
           </CenterMain>
-          <CenterDesc>{'Price Ouchi'}</CenterDesc>
+          <CenterDesc>{'APR'}</CenterDesc>
         </CenterContainerInner>
 
         <CenterContainerInner key={'id_el_tvl'}>

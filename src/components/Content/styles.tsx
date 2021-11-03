@@ -88,26 +88,31 @@ const TXT2 = styled.span`
 const CenterMain = styled.span`
   font-family: FiraGO;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   display: flex;
   align-items: center;
   text-align: center;
+  margin-right: 20px;
   color: ${(props: any) => props.theme.palette.primary.primary};
   opacity: ${(props: any) => props.opacity || 1};
   @media (${device.xs}) {
-    font-size: 32px;
+    font-size: 20px;
+    margin-right: 5px;
   }
   @media (${device.sm}) {
-    font-size: 32px;
+    margin-right: 5px;
+    font-size: 20px;
   }
   @media (${device.md}) {
-    font-size: 48px;
+    margin-right: 5px;
+    font-size: 34px;
   }
   @media (${device.lg}) {
-    font-size: 72px;
+    margin-right: 5px;
+    font-size: 58px;
   }
   @media (${device.xl}) {
-    font-size: 96px;
+    font-size: 80px;
   }
 `;
 const CenterDesc = styled.span`
