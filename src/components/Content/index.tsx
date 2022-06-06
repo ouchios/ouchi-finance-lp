@@ -127,43 +127,6 @@ const Content = () => {
           {t('mainBtn')}
         </MyBtn>
       </MainButton>
-      <CenterContainer>
-        <CenterContainerInner key={'id_el_tvl'}>
-          <CenterMain>
-            {usd_price + '$'}
-            {/* @ts-ignore */}
-            <CenterMain opacity={0.4}>+</CenterMain>
-          </CenterMain>
-          <CenterDesc>{'Price Ouchi'}</CenterDesc>
-        </CenterContainerInner>
-
-        <CenterContainerInner key={'id_el_apr'}>
-          <CenterMain>
-            {APR + '%'}
-            {/* @ts-ignore */}
-            <CenterMain opacity={0.4}>+</CenterMain>
-          </CenterMain>
-          <CenterDesc>{'APR'}</CenterDesc>
-        </CenterContainerInner>
-
-        <CenterContainerInner key={'id_el_tvl'}>
-          <CenterMain>
-            {TVl + '$'}
-            {/* @ts-ignore */}
-            <CenterMain opacity={0.4}>+</CenterMain>
-          </CenterMain>
-          <CenterDesc>{'Total Value Locked'}</CenterDesc>
-        </CenterContainerInner>
-        {/* {centerTexts.map(({ title, desc }) => ( */}
-        {/* <CenterContainerInner key={title}>*/}
-        {/* <CenterMain> */}
-        {/* {title} */}
-        {/* <CenterMain opacity={0.4}>+</CenterMain> */}
-        {/* </CenterMain> */}
-        {/* <CenterDesc>{desc}</CenterDesc> */}
-        {/* </CenterContainerInner> */}
-        {/* ))}*/}
-      </CenterContainer>
       <LearnBlock>
         <LearnTitle>Learn Ouchi Finance</LearnTitle>
         <LearnDesc>
