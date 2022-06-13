@@ -70,6 +70,10 @@ export const Share = [
     label: 'Telegram',
     link: 'https://t.me/OuchiFinance',
   },
+  {
+    label: 'Neth Validator Staking',
+    link: 'https://staking.neth.network/'
+  }
 ];
 
 const Menu = ({ open }: StyleProp) => {

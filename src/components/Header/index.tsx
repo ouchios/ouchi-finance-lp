@@ -253,7 +253,7 @@ export const Links = [
   {
     label: 'Blog',
     link: '/blog',
-  },
+  }
 ];
 
 const Header = () => {
@@ -291,12 +291,23 @@ const Header = () => {
             </HeaderLinks>
           ))}
           <HeaderLinksSoc
+            href="https://staking.neth.network/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/staking_neth.svg"
+              alt="staking.neth.network"
+              width={size.soc.w}
+              height={30}
+            />
+          </HeaderLinksSoc>
+          <HeaderLinksSoc
             href="https://twitter.com/OuchiFinance"
             target="_blank"
             rel="noreferrer"
           >
             <Image
-              onClick={toggleTheme}
               src="/twitter.svg"
               alt="twitter"
               width={size.soc.w}
@@ -309,7 +320,6 @@ const Header = () => {
             rel="noreferrer"
           >
             <Image
-              onClick={toggleTheme}
               src="/telegram.svg"
               alt="telegram"
               width={size.soc.w}
