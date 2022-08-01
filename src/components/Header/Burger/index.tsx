@@ -72,8 +72,8 @@ export const Share = [
   },
   {
     label: 'Neth Validator Staking',
-    link: 'https://staking.neth.network/'
-  }
+    link: 'https://staking.neth.network/',
+  },
 ];
 
 const Menu = ({ open }: StyleProp) => {

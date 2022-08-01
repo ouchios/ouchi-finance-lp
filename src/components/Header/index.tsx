@@ -253,7 +253,7 @@ export const Links = [
   {
     label: 'Blog',
     link: '/blog',
-  }
+  },
 ];
 
 const Header = () => {
